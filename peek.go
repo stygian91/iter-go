@@ -10,8 +10,7 @@ func Peek[V any](it stditer.Seq[V]) (GetFn[V], GetFn[V], stopFn) {
 	_next, _stop := stditer.Pull(it)
 	shouldUpdatePeek := true
 	stopped := false
-	var peekV V
-	var zeroV V
+	var peekV, zeroV V
 	var peekValid bool
 
 	next := func() (V, bool) {
@@ -53,7 +52,7 @@ func Peek2[K, V any](it stditer.Seq2[K, V]) (GetFn2[K, V], GetFn2[K, V], stopFn)
 	shouldUpdatePeek := true
 	stopped := false
 	var peekK, zeroK K
-	var peekV, zeroV  V
+	var peekV, zeroV V
 	var peekValid bool
 
 	next := func() (K, V, bool) {
