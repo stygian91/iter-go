@@ -39,7 +39,9 @@ func Utf8ReaderToRuneIter2(r io.Reader, size int) stditer.Seq2[int, rune] {
 			vbuf = slices.Concat(prev, vbuf)
 
 			for _, char := range StrRuneIter2(string(vbuf)) {
-				yield(i, char)
+				if !yield(i, char) {
+					return
+				}
 				i++
 			}
 
