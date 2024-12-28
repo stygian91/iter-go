@@ -67,7 +67,7 @@ func TestPeekable(t *testing.T) {
 	next, peek, _ := iter.Peek(strIter("abc"))
 
 	checkNext := func(expectedCurrV, expectedPeekV rune, expectedCurrValid, expectedPeekValid bool) {
-		checkPeek(t, next, peek,  expectedCurrV, expectedPeekV, expectedCurrValid, expectedPeekValid)
+		checkPeek(t, next, peek, expectedCurrV, expectedPeekV, expectedCurrValid, expectedPeekValid)
 	}
 
 	checkNext('a', 'b', true, true)
@@ -80,7 +80,7 @@ func TestPeekableStop(t *testing.T) {
 	next, peek, stop := iter.Peek(strIter("abc"))
 
 	checkNext := func(expectedCurrV, expectedPeekV rune, expectedCurrValid, expectedPeekValid bool) {
-		checkPeek(t, next, peek,  expectedCurrV, expectedPeekV, expectedCurrValid, expectedPeekValid)
+		checkPeek(t, next, peek, expectedCurrV, expectedPeekV, expectedCurrValid, expectedPeekValid)
 	}
 
 	checkNext('a', 'b', true, true)

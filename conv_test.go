@@ -1,8 +1,8 @@
 package iter_test
 
 import (
-	"testing"
 	stditer "iter"
+	"testing"
 
 	"github.com/stygian91/iter-go"
 )
